@@ -1,0 +1,1 @@
+Some simple wire-up glue that automatically invokes jQuery functions on HTML elements based on the precsence of data-ui-fn attributes. Supports passing options objects via further data-ui-* attributes.
