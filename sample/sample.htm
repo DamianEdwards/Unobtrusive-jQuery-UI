@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Unobtrusive jQuery UI Example</title>
+    <link href="style/styles.css" rel="stylesheet" />
+    <link href="style/forms.css" rel="stylesheet" />
+    <link href="style/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="pageContainer" class="default">
+        <form method="get" action="./" enctype="application/x-www-form-urlencoded">
+        <div>
+            <h1>Unobtrusive jQuery UI Example</h1>
+            <p class="sample-description">
+                This page shows an example of unobtrusively wiring-up jQuery UI to HTML elements.
+            </p>
+            <p>
+                To use the script on a page simply:
+            </p>
+            <ol id="instructions">
+                <li>Add a reference to jQuery
+                    <p class="code-sample">
+                        <code>&lt;script src="script/jquery-1.6.1.js"&gt;&lt;/script&gt;</code>
+                    </p>
+                </li>
+                <li>Add a reference to jQuery UI
+                    <p class="code-sample">
+                        <code>&lt;script src="script/jquery-ui.1.8.14.js"&gt;&lt;/script&gt;</code>
+                    </p>
+                </li>
+                <li>Add a reference to Unobtrusive jQuery UI
+                    <p class="code-sample">
+                        <code>&lt;script src="script/jquery-ui.unobtrusive.js"&gt;&lt;/script&gt;</code>
+                    </p>
+                </li>
+                <li>Add a link to a jQuery UI theme CSS file in the head
+                    <p class="code-sample">
+                        <code>&lt;link rel="stylesheet" href="style/base/jquery.ui.all.css" /&gt;</code>
+                    </p>
+                </li>
+                <li>Add data-ui-fn attributes to the HTML elements you wish to add jQuery UI features to
+                    <p class="code-sample">
+                        <code>&lt;input name="dateOfBirth" data-ui-fn="datepicker" /&gt;
+                              &lt;div data-ui-fn="draggable resizable"&gt;&lt;/div&gt;</code>
+                    </p>
+                </li>
+                <li>Add further data-ui-* attributes to set options
+                    <p class="code-sample">
+                        <code>&lt;div data-ui-fn="draggable" data-ui-draggable-containment="parent"&gt;&lt;/div&gt;</code>
+                    </p>
+                </li>
+            </ol>
+            <div class="form">
+                <h2>Date Picker</h2>
+                <div>
+                    <label for="dateOfBirth">Birth Date:</label>
+                    <input id="dateOfBirth" name="dateOfBirth" data-ui-fn="datepicker" />
+                </div>
+                <h2>Dragging &amp; Resizing</h2>
+                <div class="drag-resize">
+                    <div id="box" data-ui-fn="draggable resizable"
+                        data-ui-draggable-containment="parent"
+                        data-ui-resizable-minWidth="150"
+                        data-ui-resizable-minHeight="15">
+                        I'm a box you can drag and resize
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="pageFooter">
+            <ul>
+                <li><a accesskey="1" href="http://jquery.com">jquery</a></li>
+                <li><a accesskey="2" title="Valid HTML5" href="http://validator.w3.org/check?uri=referer">html5</a></li>
+                <li><a accesskey="4" title="Author" href="http://damianedwards.com">damian.edwards</a></li>
+            </ul>
+        </div>    
+    </div>
+    <script src="script/jquery-1.6.1.js"></script>
+    <script src="script/jquery-ui.1.8.14.js"></script>
+    <script src="../src/jquery-ui.unobtrusive.js"></script>
+    <script src="script/page.js"></script>
+</body>
+</html>
