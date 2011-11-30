@@ -45,8 +45,12 @@
                     }
                 });
 
-                // Call jQuery UI fn if it exists
-                ($el[fn] || $.noop).call($el, options);
+                // get UI fn if it exists
+                var uiFn = ($el[fn] || $.noop);
+                // call destroy to remove the ui widget
+                uiFn.call($el, 'destroy');
+                // call fn with options
+                uiFn.call($el, options);
             });
         }
     }
