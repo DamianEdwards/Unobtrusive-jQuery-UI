@@ -16,6 +16,21 @@
     var $jQui = $.ui,
         prefix = "data-ui-";
 
+    function getFunction(fn) {
+        /// <param name="fn" type="String">String of function to parse</param>
+        /// <returns type="Function" />
+        /// <summary>Takes a string and converts it to an anonymous function</summary>
+        var fnMatches = fn.match(/function\((.*?)\).*?\{(.*)\}$/);
+        if (fnMatches) {
+            var argsMatches = fnMatches[1].split(','),
+                argsString = '';
+            for (var i = 0; i < argsMatches.length; i++) {
+                argsMatches[i] = '"' + $.trim(argsMatches[i]) + '"';
+            }
+            return eval('new Function(' + argsMatches.join(',') + ', "' + fnMatches[2] + '")');
+        }
+    };
+
     $jQui.unobtrusive = {
         parse: function (element) {
             // Wire-up jQuery UI unobtrusively
@@ -40,7 +55,11 @@
 
                     if (attr.name.indexOf(optionPrefix) === 0) {
                         // camelCase the name
-                        var attrName = $.camelCase(attr.name.substr(optionPrefix.length));
+                        if (attr.value.substr(0, 8) === 'function') { // test for anonymous function
+                            options[attrName] = getFunction(attr.value);
+                        } else {
+                            options[attrName] = attr.value;
+                        }
                         options[attrName] = attr.value;
                     }
                 });
