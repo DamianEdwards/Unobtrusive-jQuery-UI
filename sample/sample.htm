@@ -21,12 +21,12 @@
             <ol id="instructions">
                 <li>Add a reference to jQuery
                     <p class="code-sample">
-                        <code>&lt;script src="script/jquery-1.6.1.js"&gt;&lt;/script&gt;</code>
+                        <code>&lt;script src="script/jquery-1.7.1.js"&gt;&lt;/script&gt;</code>
                     </p>
                 </li>
                 <li>Add a reference to jQuery UI
                     <p class="code-sample">
-                        <code>&lt;script src="script/jquery-ui.1.8.14.js"&gt;&lt;/script&gt;</code>
+                        <code>&lt;script src="script/jquery-ui.1.8.17.js"&gt;&lt;/script&gt;</code>
                     </p>
                 </li>
                 <li>Add a reference to Unobtrusive jQuery UI
@@ -62,9 +62,36 @@
                     <div id="box" data-ui-fn="draggable resizable"
                         data-ui-draggable-containment="parent"
                         data-ui-resizable-minWidth="150"
-                        data-ui-resizable-minHeight="15">
+                        data-ui-resizable-minHeight="15"
+                        data-ui-resizable-handles="nw,ne,se,sw">
                         I'm a box you can drag and resize
                     </div>
+                </div>
+                <h2>Tabs</h2>
+                <div>
+                    <div data-ui-fn="tabs" data-ui-tabs-selected="1">
+                        <ul>
+		                    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+		                    <li><a href="#tabs-2">Proin dolor</a></li>
+		                    <li><a href="#tabs-3">Aenean lacinia</a></li>
+	                    </ul>
+	                    <div id="tabs-1">
+		                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+	                    </div>
+	                    <div id="tabs-2">
+		                    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+	                    </div>
+	                    <div id="tabs-3">
+		                    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+		                    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+	                    </div>
+                    </div>
+                </div>
+                <h2>Slider</h2>
+                <div>
+                    <div data-ui-fn="slider"
+                        data-ui-slider-animate="true"
+                        data-ui-slider-value="47" />
                 </div>
             </div>
         </form>
@@ -76,8 +103,8 @@
             </ul>
         </div>    
     </div>
-    <script src="script/jquery-1.6.1.js"></script>
-    <script src="script/jquery-ui.1.8.14.js"></script>
+    <script src="script/jquery-1.7.1.js"></script>
+    <script src="script/jquery-ui.1.8.17.js"></script>
     <script src="../src/jquery-ui.unobtrusive.js"></script>
     <script src="script/page.js"></script>
 </body>
