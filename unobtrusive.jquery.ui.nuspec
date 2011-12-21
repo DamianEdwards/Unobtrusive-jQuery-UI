@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>unobtrusive.jquery.ui</id>
+	<title>Unobtrusive jQuery UI</title>
+    <version>0.2</version>
+    <authors>Damian Edwards</authors>
+    <licenseUrl>http://www.opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/DamianEdwards/Unobtrusive-jQuery-UI</projectUrl>
+    <description>Some simple wire-up glue that automatically invokes jQuery functions on HTML elements based on the presence of data-ui-fn attributes. Supports passing options objects via further data-ui-* attributes.</description>
+    <copyright>Copyright 2011 Damian Edwards</copyright>
+    <tags>jquery plugins</tags>
+    <dependencies>
+      <dependency id="jquery" version="1.6.1" />
+    </dependencies>
+  </metadata>
+  <files>
+	    <file src="src\*.js" target="content\scripts" />
+	</files>
+</package>
