@@ -1,0 +1,41 @@
+{
+    "name": "unobtrusive.jquery.ui",
+    "version": "0.2",
+    "title": "Unobtrusive jQuery UI",
+    "author": {
+        "name": "Damian Edwards",
+        "url": "http://damianedwards.com"
+    },
+    "licenses": [
+        {
+            "type": "Ms-PL",
+            "url": "http://www.opensource.org/licenses/MS-PL"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6.1",
+		"jquery-ui": "*"
+    },
+    "description": "Unobtrusive wire-up of jQuery UI features using data-ui-* attributes on target elements.",
+    "keywords": [
+        "unobtrusive",
+        "jquery ui",
+		"ui"
+    ],
+    "homepage": "https://github.com/DamianEdwards/Unobtrusive-jQuery-UI",
+    "contributors": [
+        {
+            "name": "Damian Edwards",
+			"email": "damian@damianedwards.com",
+            "url": "https://github.com/DamianEdwards"
+        },
+		{
+			"name": "Andrew Cohen",
+			"url": "http://omegaluz.wordpress.com/"
+		}
+    ],
+    "files": [
+        "src/jquery-ui.unobtrusive.js",
+		"src/jquery-ui.unobtrusive.min.js"
+    ]
+}
