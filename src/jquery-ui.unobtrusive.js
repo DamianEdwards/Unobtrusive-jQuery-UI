@@ -1,11 +1,12 @@
 ﻿/*!
-* Unobtrusive jQuery UI 0.2
+* Unobtrusive jQuery UI 0.3
 * Copyright 2011, Damian Edwards http://damianedwards.com
 * Licensed under Ms-PL
 * http://www.opensource.org/licenses/MS-PL
 */
 
 /*!
+* Modified by Steven Lietaer, 05/31/2013
 * Modified by Andrew Cohen, 11/30/2011
 * TempWorks Software, Inc.
 */
@@ -85,8 +86,11 @@
 
                 // get UI fn if it exists
                 uiFn = ($el[fn] || $.noop);
-                // call destroy to remove the ui widget
-                uiFn.call($el, 'destroy');
+                // test if ui widget is initialized
+                if ($el.is('.ui-' + fn)) {
+                    // call destroy to remove the ui widget
+                    uiFn.call($el, 'destroy');
+                }
                 // call fn with options
                 uiFn.call($el, options);
             });
