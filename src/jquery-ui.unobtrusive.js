@@ -36,6 +36,19 @@
         }
     }
 
+    function getOptionsObject(options, attrName, value) {
+        var options = options || {};
+        var propName = attrName.substring(attrName.indexOf('_') + 1);
+        if (propName.indexOf('_') != -1) {
+            var option = propName.substring(0, propName.indexOf('_'));
+            options[option] = getOptionsObject(options[option], propName, value);
+        }
+        else {
+            options[propName] = value;
+        }
+        return options;
+    }
+
     $jQui.unobtrusive = {
 
         parse: function (context) {
@@ -77,6 +90,9 @@
                         // test for anonymous function
                         if (attr.value.substr(0, 8) === 'function') {
                             options[attrName] = getFunction(attr.value);
+                        } else if (attrName.indexOf('_') != -1) {
+                            var option = attrName.substring(0, attrName.indexOf('_'));
+                            options[option] = getOptionsObject(options[option], attrName, attr.value);
                         } else {
                             options[attrName] = attr.value;
                         }
