@@ -86,7 +86,8 @@
                 // get UI fn if it exists
                 uiFn = ($el[fn] || $.noop);
                 // call destroy to remove the ui widget
-                uiFn.call($el, 'destroy');
+                if ($el.data(fn) !== undefined)
+                    uiFn.call($el, 'destroy');
                 // call fn with options
                 uiFn.call($el, options);
             });
